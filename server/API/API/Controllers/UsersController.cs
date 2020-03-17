@@ -93,7 +93,7 @@ namespace API.Controllers
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception($"Deleting of temporary folder '{tempDirectoryPath}' failed.", ex);
+                    logger.LogError("Deleting of temporary folder '{TempDirectoryPath}' failed. Exception: {Exception}", tempDirectoryPath, ex);
                 }
             }
 
